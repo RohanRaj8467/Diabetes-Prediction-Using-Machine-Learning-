@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Mar 30 22:08:00 2024
-
-@author: aman0
-"""
 
 import numpy as np
 import pickle
@@ -26,7 +20,7 @@ def diabetes_prediction(input_data):
     prediction = loaded_model.predict(input_data_reshaped)
     print(prediction)
 
-    if (prediction[0] == 1):
+    if (prediction[0] == 0):
       return 'The person is not diabetic'
     else:
       return 'The person is diabetic'
@@ -106,7 +100,3 @@ if selected == 'Diabetes Prediction':
             diab_diagnosis = 'The person is not diabetic'
 
     st.success(diab_diagnosis)
-
-    
-    
-    
